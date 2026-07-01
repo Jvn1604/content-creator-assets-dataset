@@ -1,0 +1,1351 @@
+[
+  {
+    "id": 1,
+    "name": "Neon Grid Stream Frame",
+    "category": "overlay",
+    "style_tags": [
+      "corporate",
+      "cyberpunk"
+    ],
+    "platforms": [
+      "TikTok"
+    ],
+    "color_palette": [
+      "#0D0221",
+      "#FF2E88",
+      "#00E5FF",
+      "#F5D300"
+    ],
+    "font_family": null,
+    "effect_notes": "jitter animation on hover",
+    "animation_type": "static",
+    "use_case": "Main gameplay overlay border for FPS/competitive streams",
+    "description": "Full-frame border overlay with a pulsing neon grid line along the bottom third",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/001.svg"
+  },
+  {
+    "id": 2,
+    "name": "Purple Shadow Impact Font Kit",
+    "category": "font",
+    "style_tags": [
+      "esports-aggressive",
+      "purple-shadow"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#120021",
+      "#7B2FF7",
+      "#C77DFF",
+      "#FFFFFF"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "RGB channel split on reveal",
+    "animation_type": "static",
+    "use_case": "Highlight text for clip montages and reaction moments",
+    "description": "Bold condensed sans typeface preset with a hard purple drop-shadow and thin white outline, comic-impact styling",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/002.svg"
+  },
+  {
+    "id": 3,
+    "name": "Glitch Wipe Scene Transition",
+    "category": "transition",
+    "style_tags": [
+      "anime",
+      "glitchcore"
+    ],
+    "platforms": [
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0A0A0A",
+      "#FF003C",
+      "#00FFF0",
+      "#FFFFFF"
+    ],
+    "font_family": null,
+    "effect_notes": "flat fill, no effects",
+    "animation_type": "fade",
+    "use_case": "Scene switch transition",
+    "description": "Horizontal RGB-split glitch wipe used to cut between 'Just Chatting' and 'Gameplay' scenes",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/003.svg"
+  },
+  {
+    "id": 4,
+    "name": "Cyberpunk HUD Lower Third",
+    "category": "lower-third",
+    "style_tags": [
+      "corporate",
+      "cyberpunk"
+    ],
+    "platforms": [
+      "TikTok",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0D0221",
+      "#FF2E88",
+      "#00E5FF",
+      "#F5D300"
+    ],
+    "font_family": "Geometric Sans",
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "static",
+    "use_case": "Guest/host name display during interviews or co-op streams",
+    "description": "Angular lower-third name plate with scanline texture and a single accent stripe",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/004.svg"
+  },
+  {
+    "id": 5,
+    "name": "Retro CRT Follow Alert",
+    "category": "alert",
+    "style_tags": [
+      "clean-tech",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "TikTok"
+    ],
+    "color_palette": [
+      "#1B1035",
+      "#FF4FA0",
+      "#3EDBF0",
+      "#F7F2E7"
+    ],
+    "font_family": "Handwritten Marker",
+    "effect_notes": "jitter animation on hover",
+    "animation_type": "slide",
+    "use_case": "Follower/subscriber alert box",
+    "description": "New-follower alert styled as an old CRT boot-up sequence with static roll-in",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/005.svg"
+  },
+  {
+    "id": 6,
+    "name": "Minimalist Chat Panel",
+    "category": "panel",
+    "style_tags": [
+      "minimalist",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#F5F5F5",
+      "#1A1A1A",
+      "#8C8C8C",
+      "#3D5AFE"
+    ],
+    "font_family": null,
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "static",
+    "use_case": "On-stream chat visibility panel",
+    "description": "Flat, low-contrast panel frame for embedding chat overlay on-screen",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/006.svg"
+  },
+  {
+    "id": 7,
+    "name": "Anime Sparkle Intro Sting",
+    "category": "intro-outro",
+    "style_tags": [
+      "anime",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#FFE1F0",
+      "#FF6FA5",
+      "#7A5CFA",
+      "#FFFFFF"
+    ],
+    "font_family": null,
+    "effect_notes": "RGB channel split on reveal",
+    "animation_type": "zoom-punch",
+    "use_case": "Stream start intro sting",
+    "description": "Short sting with sparkle particle burst and hand-drawn motion lines revealing the channel logo",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/007.svg"
+  },
+  {
+    "id": 8,
+    "name": "Esports Bracket Panel",
+    "category": "panel",
+    "style_tags": [
+      "esports-aggressive",
+      "pixel-art"
+    ],
+    "platforms": [
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0D0D0D",
+      "#FF1E1E",
+      "#FFFFFF",
+      "#3D3D3D"
+    ],
+    "font_family": null,
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "slide",
+    "use_case": "Tournament/bracket stream overlay",
+    "description": "Data-dense panel template for displaying tournament bracket standings",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/008.svg"
+  },
+  {
+    "id": 9,
+    "name": "VHS Rewind Outro",
+    "category": "intro-outro",
+    "style_tags": [
+      "handdrawn",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Kick",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#1B1035",
+      "#FF4FA0",
+      "#3EDBF0",
+      "#F7F2E7"
+    ],
+    "font_family": null,
+    "effect_notes": "gradient fill top-to-bottom",
+    "animation_type": "fade",
+    "use_case": "End-of-stream outro",
+    "description": "Outro sequence styled like a VHS rewind with tracking distortion lines",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/009.svg"
+  },
+  {
+    "id": 10,
+    "name": "Pixel Heart Donation Alert",
+    "category": "alert",
+    "style_tags": [
+      "horror-stream",
+      "pixel-art"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok"
+    ],
+    "color_palette": [
+      "#212042",
+      "#E84855",
+      "#3185FC",
+      "#F9DC5C"
+    ],
+    "font_family": "Geometric Sans",
+    "effect_notes": "gradient fill top-to-bottom",
+    "animation_type": "static",
+    "use_case": "Donation/tip alert",
+    "description": "8-bit pixel-art heart animation triggered on donation events",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/010.svg"
+  },
+  {
+    "id": 11,
+    "name": "Cozy Pastel Webcam Frame",
+    "category": "overlay",
+    "style_tags": [
+      "pastel-kawaii"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#FFF0F5",
+      "#FFB6D9",
+      "#B5EAD7",
+      "#C7CEEA"
+    ],
+    "font_family": null,
+    "effect_notes": "gradient fill top-to-bottom",
+    "animation_type": "slide",
+    "use_case": "Webcam frame for cozy/variety streams",
+    "description": "Soft rounded webcam border with floating pastel particles",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/011.svg"
+  },
+  {
+    "id": 12,
+    "name": "Horror Static Jumpscare Transition",
+    "category": "transition",
+    "style_tags": [
+      "glitchcore",
+      "horror-stream"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok"
+    ],
+    "color_palette": [
+      "#0A0000",
+      "#4A0404",
+      "#8C1C13",
+      "#D9D9D9"
+    ],
+    "font_family": null,
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "static",
+    "use_case": "Horror game scene transition",
+    "description": "Sudden static burst transition with a low screech cue point marker (audio not included)",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/012.svg"
+  },
+  {
+    "id": 13,
+    "name": "Vaporwave Sunset Panel Set",
+    "category": "panel",
+    "style_tags": [
+      "retro-vhs",
+      "vaporwave"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#2B1055",
+      "#FF71CE",
+      "#01CDFE",
+      "#05FFA1"
+    ],
+    "font_family": null,
+    "effect_notes": "2px stroke outline, no shadow",
+    "animation_type": "static",
+    "use_case": "Social/about-me panels below stream",
+    "description": "Panel set with gradient sunset backdrop and grid-floor motif",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/013.svg"
+  },
+  {
+    "id": 14,
+    "name": "Clean Tech Sans Font Kit",
+    "category": "font",
+    "style_tags": [
+      "clean-tech",
+      "pixel-art"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0F172A",
+      "#38BDF8",
+      "#E2E8F0",
+      "#1E293B"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "flat fill, no effects",
+    "animation_type": "static",
+    "use_case": "Titles for tech/coding streams",
+    "description": "Geometric sans with subtle glow and 2px stroke, no shadow",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/014.svg"
+  },
+  {
+    "id": 15,
+    "name": "Esports Aggressive Slash Transition",
+    "category": "transition",
+    "style_tags": [
+      "corporate",
+      "esports-aggressive"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0D0D0D",
+      "#FF1E1E",
+      "#FFFFFF",
+      "#3D3D3D"
+    ],
+    "font_family": null,
+    "effect_notes": "RGB channel split on reveal",
+    "animation_type": "glitch",
+    "use_case": "Kill-cam or highlight-reel scene cut",
+    "description": "Diagonal slash-cut transition with motion blur, tuned for fast FPS pacing",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/015.svg"
+  },
+  {
+    "id": 16,
+    "name": "Handdrawn Doodle Border Overlay",
+    "category": "overlay",
+    "style_tags": [
+      "handdrawn",
+      "pastel-kawaii"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#FAF3E0",
+      "#3E2723",
+      "#D8A47F",
+      "#8D6A9F"
+    ],
+    "font_family": null,
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "static",
+    "use_case": "Art/drawing stream overlay border",
+    "description": "Sketchy hand-drawn border frame with animated doodle accents in corners",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/016.svg"
+  },
+  {
+    "id": 17,
+    "name": "Neon Noir Subscriber Alert",
+    "category": "alert",
+    "style_tags": [
+      "neon-noir",
+      "vaporwave"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0A0F1E",
+      "#E100FF",
+      "#00FFC6",
+      "#1A1F3D"
+    ],
+    "font_family": "Bold Condensed Sans",
+    "effect_notes": "jitter animation on hover",
+    "animation_type": "fade",
+    "use_case": "Subscriber alert box",
+    "description": "Rain-on-glass neon sign style subscriber alert with slow fade-in",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/017.svg"
+  },
+  {
+    "id": 18,
+    "name": "Corporate Clean Lower Third",
+    "category": "lower-third",
+    "style_tags": [
+      "corporate",
+      "pixel-art"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0B2545",
+      "#134074",
+      "#8DA9C4",
+      "#EEF4ED"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "jitter animation on hover",
+    "animation_type": "wipe",
+    "use_case": "Product demo / corporate livestream name plate",
+    "description": "Flat-fill lower third with a single thin rule line, no shadow or glow",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/018.svg"
+  },
+  {
+    "id": 19,
+    "name": "Glitchcore Raid Alert",
+    "category": "alert",
+    "style_tags": [
+      "glitchcore",
+      "minimalist"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0A0A0A",
+      "#FF003C",
+      "#00FFF0",
+      "#FFFFFF"
+    ],
+    "font_family": "Bold Condensed Sans",
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "slide",
+    "use_case": "Raid alert box",
+    "description": "Aggressive RGB-split glitch alert for incoming raids",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/019.svg"
+  },
+  {
+    "id": 20,
+    "name": "Kawaii Sticker Panel Set",
+    "category": "panel",
+    "style_tags": [
+      "pastel-kawaii",
+      "vaporwave"
+    ],
+    "platforms": [
+      "TikTok"
+    ],
+    "color_palette": [
+      "#FFF0F5",
+      "#FFB6D9",
+      "#B5EAD7",
+      "#C7CEEA"
+    ],
+    "font_family": null,
+    "effect_notes": "jitter animation on hover",
+    "animation_type": "static",
+    "use_case": "Info panels for cozy/anime streams",
+    "description": "Rounded sticker-style panels with bounce-in animation",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/020.svg"
+  },
+  {
+    "id": 21,
+    "name": "Retro VHS Scene Frame",
+    "category": "overlay",
+    "style_tags": [
+      "cyberpunk",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Kick",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#1B1035",
+      "#FF4FA0",
+      "#3EDBF0",
+      "#F7F2E7"
+    ],
+    "font_family": null,
+    "effect_notes": "gradient fill top-to-bottom",
+    "animation_type": "particle-burst",
+    "use_case": "Retro-aesthetic gameplay overlay",
+    "description": "Full overlay with tracking lines, timestamp burn-in, and film grain",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/021.svg"
+  },
+  {
+    "id": 22,
+    "name": "Pixel Font Kit \u2014 Arcade",
+    "category": "font",
+    "style_tags": [
+      "anime",
+      "pixel-art"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#212042",
+      "#E84855",
+      "#3185FC",
+      "#F9DC5C"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "static",
+    "use_case": "Retro/pixel game stream titles",
+    "description": "8-bit bitmap font preset with hard drop shadow, no anti-aliasing",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/022.svg"
+  },
+  {
+    "id": 23,
+    "name": "Minimalist Wipe Transition",
+    "category": "transition",
+    "style_tags": [
+      "anime",
+      "minimalist"
+    ],
+    "platforms": [
+      "TikTok",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#F5F5F5",
+      "#1A1A1A",
+      "#8C8C8C",
+      "#3D5AFE"
+    ],
+    "font_family": null,
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "particle-burst",
+    "use_case": "General-purpose scene transition",
+    "description": "Single flat-color wipe with easing, no particles or glow",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/023.svg"
+  },
+  {
+    "id": 24,
+    "name": "Cyberpunk Cheer Alert",
+    "category": "alert",
+    "style_tags": [
+      "cyberpunk",
+      "pastel-kawaii"
+    ],
+    "platforms": [
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0D0221",
+      "#FF2E88",
+      "#00E5FF",
+      "#F5D300"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "static",
+    "use_case": "Bits/cheer alert box",
+    "description": "Bit-cheer alert with holographic shimmer and Japanese-inspired kana accents",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/024.svg"
+  },
+  {
+    "id": 25,
+    "name": "Anime Chibi Follow Alert",
+    "category": "alert",
+    "style_tags": [
+      "anime",
+      "esports-aggressive"
+    ],
+    "platforms": [
+      "TikTok",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#FFE1F0",
+      "#FF6FA5",
+      "#7A5CFA",
+      "#FFFFFF"
+    ],
+    "font_family": "Grotesk Sans",
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "static",
+    "use_case": "Follower alert box",
+    "description": "Chibi-style character pop-in animation on new follow",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/025.svg"
+  },
+  {
+    "id": 26,
+    "name": "Corporate Intro Sting",
+    "category": "intro-outro",
+    "style_tags": [
+      "corporate",
+      "horror-stream"
+    ],
+    "platforms": [
+      "Kick"
+    ],
+    "color_palette": [
+      "#0B2545",
+      "#134074",
+      "#8DA9C4",
+      "#EEF4ED"
+    ],
+    "font_family": null,
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "fade",
+    "use_case": "Stream/webinar start sting",
+    "description": "Clean logo reveal sting with subtle particle shimmer",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/026.svg"
+  },
+  {
+    "id": 27,
+    "name": "Neon Grid Lower Third",
+    "category": "lower-third",
+    "style_tags": [
+      "clean-tech",
+      "cyberpunk"
+    ],
+    "platforms": [
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0D0221",
+      "#FF2E88",
+      "#00E5FF",
+      "#F5D300"
+    ],
+    "font_family": "Bold Condensed Sans",
+    "effect_notes": "jitter animation on hover",
+    "animation_type": "glitch",
+    "use_case": "Co-branded name plate for Neon Grid overlay set",
+    "description": "Matches Neon Grid Stream Frame overlay; angular name plate with grid accent",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/027.svg"
+  },
+  {
+    "id": 28,
+    "name": "Glitch Font Kit \u2014 Terminal",
+    "category": "font",
+    "style_tags": [
+      "glitchcore",
+      "handdrawn"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0A0A0A",
+      "#FF003C",
+      "#00FFF0",
+      "#FFFFFF"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "static",
+    "use_case": "Coding/hacking-themed stream titles",
+    "description": "Monospace terminal font preset with occasional glitch-flicker keyframes",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/028.svg"
+  },
+  {
+    "id": 29,
+    "name": "Esports Scoreboard Panel",
+    "category": "panel",
+    "style_tags": [
+      "esports-aggressive",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0D0D0D",
+      "#FF1E1E",
+      "#FFFFFF",
+      "#3D3D3D"
+    ],
+    "font_family": null,
+    "effect_notes": "gradient fill top-to-bottom",
+    "animation_type": "slide",
+    "use_case": "1v1/competitive match overlay",
+    "description": "Live scoreboard panel template with team color slots",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/029.svg"
+  },
+  {
+    "id": 30,
+    "name": "Cozy Rain Window Overlay",
+    "category": "overlay",
+    "style_tags": [
+      "cozy-stream"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok"
+    ],
+    "color_palette": [
+      "#FFF4E6",
+      "#F4A259",
+      "#5B8C5A",
+      "#3A3335"
+    ],
+    "font_family": null,
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "static",
+    "use_case": "Ambient/cozy stream decoration",
+    "description": "Ambient rain-on-window overlay for corner-of-screen decoration",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/030.svg"
+  },
+  {
+    "id": 31,
+    "name": "VHS Static Alert \u2014 Sub Goal",
+    "category": "alert",
+    "style_tags": [
+      "esports-aggressive",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#1B1035",
+      "#FF4FA0",
+      "#3EDBF0",
+      "#F7F2E7"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "static",
+    "use_case": "Subscriber goal tracker",
+    "description": "Progress-bar sub goal alert with VHS static fill animation",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/031.svg"
+  },
+  {
+    "id": 32,
+    "name": "Pastel Kawaii Intro Sting",
+    "category": "intro-outro",
+    "style_tags": [
+      "minimalist",
+      "pastel-kawaii"
+    ],
+    "platforms": [
+      "Kick",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#FFF0F5",
+      "#FFB6D9",
+      "#B5EAD7",
+      "#C7CEEA"
+    ],
+    "font_family": null,
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "slide",
+    "use_case": "Stream start intro sting",
+    "description": "Bouncy pastel logo intro with confetti particle pop",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/032.svg"
+  },
+  {
+    "id": 33,
+    "name": "Hacker Green Terminal Overlay",
+    "category": "overlay",
+    "style_tags": [
+      "clean-tech",
+      "neon-noir"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0F172A",
+      "#38BDF8",
+      "#E2E8F0",
+      "#1E293B"
+    ],
+    "font_family": null,
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "particle-burst",
+    "use_case": "Coding/hacking-themed stream overlay",
+    "description": "Full-frame overlay styled as a green-on-black terminal window border",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/033.svg"
+  },
+  {
+    "id": 34,
+    "name": "Neon Noir Transition \u2014 Rain Wipe",
+    "category": "transition",
+    "style_tags": [
+      "neon-noir",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0A0F1E",
+      "#E100FF",
+      "#00FFC6",
+      "#1A1F3D"
+    ],
+    "font_family": null,
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "particle-burst",
+    "use_case": "Neon-noir themed scene transition",
+    "description": "Vertical rain-streak wipe transition with neon reflection",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/034.svg"
+  },
+  {
+    "id": 35,
+    "name": "Handdrawn Marker Font Kit",
+    "category": "font",
+    "style_tags": [
+      "esports-aggressive",
+      "handdrawn"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#FAF3E0",
+      "#3E2723",
+      "#D8A47F",
+      "#8D6A9F"
+    ],
+    "font_family": "Geometric Sans",
+    "effect_notes": "RGB channel split on reveal",
+    "animation_type": "static",
+    "use_case": "Art stream titles and callouts",
+    "description": "Sketchy marker-style font with slight jitter animation on reveal",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/035.svg"
+  },
+  {
+    "id": 36,
+    "name": "Esports Aggressive Kill Alert",
+    "category": "alert",
+    "style_tags": [
+      "esports-aggressive",
+      "handdrawn"
+    ],
+    "platforms": [
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0D0D0D",
+      "#FF1E1E",
+      "#FFFFFF",
+      "#3D3D3D"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "fade",
+    "use_case": "Manual highlight/hype alert",
+    "description": "Fast zoom-punch alert for in-game kill/highlight moments (manual trigger)",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/036.svg"
+  },
+  {
+    "id": 37,
+    "name": "Cute Cloud Chat Panel",
+    "category": "panel",
+    "style_tags": [
+      "handdrawn",
+      "pastel-kawaii"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#FFF0F5",
+      "#FFB6D9",
+      "#B5EAD7",
+      "#C7CEEA"
+    ],
+    "font_family": null,
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "particle-burst",
+    "use_case": "Chat panel for cozy/variety streams",
+    "description": "Rounded cloud-shaped chat embed panel with soft drop shadow",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/037.svg"
+  },
+  {
+    "id": 38,
+    "name": "Retro Arcade Cabinet Frame Overlay",
+    "category": "overlay",
+    "style_tags": [
+      "pixel-art",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "TikTok",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#1B1035",
+      "#FF4FA0",
+      "#3EDBF0",
+      "#F7F2E7"
+    ],
+    "font_family": null,
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "slide",
+    "use_case": "Retro/arcade game stream overlay",
+    "description": "Overlay styled as an arcade cabinet bezel around the gameplay capture",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/038.svg"
+  },
+  {
+    "id": 39,
+    "name": "Corporate Panel Set \u2014 Info Grid",
+    "category": "panel",
+    "style_tags": [
+      "corporate",
+      "neon-noir"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0B2545",
+      "#134074",
+      "#8DA9C4",
+      "#EEF4ED"
+    ],
+    "font_family": null,
+    "effect_notes": "flat fill, no effects",
+    "animation_type": "slide",
+    "use_case": "Standard info panel row below stream",
+    "description": "Grid-aligned info panel set (schedule, socials, rules) in flat corporate style",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/039.svg"
+  },
+  {
+    "id": 40,
+    "name": "Vaporwave Grid Lower Third",
+    "category": "lower-third",
+    "style_tags": [
+      "minimalist",
+      "vaporwave"
+    ],
+    "platforms": [
+      "Kick",
+      "TikTok"
+    ],
+    "color_palette": [
+      "#2B1055",
+      "#FF71CE",
+      "#01CDFE",
+      "#05FFA1"
+    ],
+    "font_family": "Bitmap 8px",
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "static",
+    "use_case": "Name plate for vaporwave-themed streams",
+    "description": "Lower third with checkerboard-grid backdrop and gradient text fill",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/040.svg"
+  },
+  {
+    "id": 41,
+    "name": "Glitchcore Scene Wipe",
+    "category": "transition",
+    "style_tags": [
+      "corporate",
+      "glitchcore"
+    ],
+    "platforms": [
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0A0A0A",
+      "#FF003C",
+      "#00FFF0",
+      "#FFFFFF"
+    ],
+    "font_family": null,
+    "effect_notes": "RGB channel split on reveal",
+    "animation_type": "slide",
+    "use_case": "High-energy scene transition",
+    "description": "Full-glitch scene wipe with datamosh-style block artifacts",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/041.svg"
+  },
+  {
+    "id": 42,
+    "name": "Anime Petal Outro",
+    "category": "intro-outro",
+    "style_tags": [
+      "anime",
+      "corporate"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#FFE1F0",
+      "#FF6FA5",
+      "#7A5CFA",
+      "#FFFFFF"
+    ],
+    "font_family": null,
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "static",
+    "use_case": "End-of-stream outro",
+    "description": "Falling cherry-blossom petal outro with soft fade to end card",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/042.svg"
+  },
+  {
+    "id": 43,
+    "name": "Minimalist Font Kit \u2014 Neutral Sans",
+    "category": "font",
+    "style_tags": [
+      "horror-stream",
+      "minimalist"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#F5F5F5",
+      "#1A1A1A",
+      "#8C8C8C",
+      "#3D5AFE"
+    ],
+    "font_family": "Rounded Display",
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "static",
+    "use_case": "General-purpose titles, subtitle-safe",
+    "description": "Clean neutral sans with no effects, adjustable weight only",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/043.svg"
+  },
+  {
+    "id": 44,
+    "name": "Neon Cheer Progress Panel",
+    "category": "panel",
+    "style_tags": [
+      "clean-tech",
+      "corporate"
+    ],
+    "platforms": [
+      "Twitch"
+    ],
+    "color_palette": [
+      "#0F172A",
+      "#38BDF8",
+      "#E2E8F0",
+      "#1E293B"
+    ],
+    "font_family": null,
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "wipe",
+    "use_case": "Bits goal tracker panel",
+    "description": "Bits/cheer progress panel with neon fill bar",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/044.svg"
+  },
+  {
+    "id": 45,
+    "name": "Horror Vignette Overlay",
+    "category": "overlay",
+    "style_tags": [
+      "horror-stream"
+    ],
+    "platforms": [
+      "Kick",
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0A0000",
+      "#4A0404",
+      "#8C1C13",
+      "#D9D9D9"
+    ],
+    "font_family": null,
+    "effect_notes": "2px stroke outline, no shadow",
+    "animation_type": "particle-burst",
+    "use_case": "Horror/atmospheric game overlay",
+    "description": "Dark vignette overlay with slow pulsing edge, no jump effects",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/045.svg"
+  },
+  {
+    "id": 46,
+    "name": "Pixel Raid Alert",
+    "category": "alert",
+    "style_tags": [
+      "esports-aggressive",
+      "pixel-art"
+    ],
+    "platforms": [
+      "TikTok",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#212042",
+      "#E84855",
+      "#3185FC",
+      "#F9DC5C"
+    ],
+    "font_family": "Geometric Sans",
+    "effect_notes": "soft glow, 8px blur radius",
+    "animation_type": "glitch",
+    "use_case": "Raid alert box",
+    "description": "8-bit pixel raid train alert with marching sprite animation",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/046.svg"
+  },
+  {
+    "id": 47,
+    "name": "Cozy Fireplace Corner Overlay",
+    "category": "overlay",
+    "style_tags": [
+      "cozy-stream",
+      "pixel-art"
+    ],
+    "platforms": [
+      "TikTok"
+    ],
+    "color_palette": [
+      "#FFF4E6",
+      "#F4A259",
+      "#5B8C5A",
+      "#3A3335"
+    ],
+    "font_family": null,
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "slide",
+    "use_case": "Ambient decoration for chatting/cozy streams",
+    "description": "Looping animated fireplace decoration for screen corner",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/047.svg"
+  },
+  {
+    "id": 48,
+    "name": "Esports Zoom Punch Transition",
+    "category": "transition",
+    "style_tags": [
+      "esports-aggressive",
+      "retro-vhs"
+    ],
+    "platforms": [
+      "Kick"
+    ],
+    "color_palette": [
+      "#0D0D0D",
+      "#FF1E1E",
+      "#FFFFFF",
+      "#3D3D3D"
+    ],
+    "font_family": null,
+    "effect_notes": "hard drop-shadow, no blur",
+    "animation_type": "slide",
+    "use_case": "Highlight/hype scene transition",
+    "description": "Hard zoom-punch transition with screen-shake, tuned for hype moments",
+    "retention_tier": "High",
+    "retention_rationale": "Fast, legible reveal (<1.2s) and high contrast against typical gameplay footage",
+    "preview_image": "assets/previews/048.svg"
+  },
+  {
+    "id": 49,
+    "name": "Terminal Font Kit \u2014 Glitch Mono",
+    "category": "font",
+    "style_tags": [
+      "glitchcore",
+      "neon-noir"
+    ],
+    "platforms": [
+      "Twitch",
+      "YouTube"
+    ],
+    "color_palette": [
+      "#0A0A0A",
+      "#FF003C",
+      "#00FFF0",
+      "#FFFFFF"
+    ],
+    "font_family": "Serif Display",
+    "effect_notes": "jitter animation on hover",
+    "animation_type": "static",
+    "use_case": "Cyberpunk/hacking stream titles",
+    "description": "Monospace font preset with periodic single-character glitch swap",
+    "retention_tier": "Low",
+    "retention_rationale": "Dense detail or slow reveal risks being skipped/ignored during high-action segments",
+    "preview_image": "assets/previews/049.svg"
+  },
+  {
+    "id": 50,
+    "name": "Kawaii Star Follow Alert",
+    "category": "alert",
+    "style_tags": [
+      "pastel-kawaii"
+    ],
+    "platforms": [
+      "TikTok",
+      "Twitch"
+    ],
+    "color_palette": [
+      "#FFF0F5",
+      "#FFB6D9",
+      "#B5EAD7",
+      "#C7CEEA"
+    ],
+    "font_family": "Bold Condensed Sans",
+    "effect_notes": "scanline overlay texture",
+    "animation_type": "zoom-punch",
+    "use_case": "Follower alert box",
+    "description": "Star-burst pop-in follow alert with bounce easing",
+    "retention_tier": "Medium",
+    "retention_rationale": "Readable but animation length may compete with fast-paced gameplay moments",
+    "preview_image": "assets/previews/050.svg"
+  }
+]

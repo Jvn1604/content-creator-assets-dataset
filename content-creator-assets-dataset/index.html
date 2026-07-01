@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Creator Assets Dataset — Browser</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B0D10;
+    --panel: #14171C;
+    --panel-raised: #1B1F26;
+    --border: #262B33;
+    --text: #E8ECEF;
+    --muted: #7A8188;
+    --cyan: #00E5FF;
+    --magenta: #FF2E88;
+    --amber: #FFB800;
+    --green: #3DDC84;
+    --font-display: 'Chakra Petch', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    background-image:
+      radial-gradient(circle at 15% 0%, rgba(0,229,255,0.06), transparent 40%),
+      radial-gradient(circle at 85% 100%, rgba(255,46,136,0.05), transparent 40%);
+    color: var(--text);
+    font-family: var(--font-body);
+    min-height: 100vh;
+  }
+
+  /* ---------- Top bar ---------- */
+  header.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(11,13,16,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 28px;
+  }
+
+  .topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1320px;
+    margin: 0 auto;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .rec-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--magenta);
+    box-shadow: 0 0 0 0 rgba(255,46,136,0.6);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,46,136,0.55); }
+    70% { box-shadow: 0 0 0 9px rgba(255,46,136,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,46,136,0); }
+  }
+
+  .brand h1 {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .brand .sub {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px;
+  }
+
+  .search-wrap {
+    flex: 1;
+    max-width: 360px;
+    min-width: 220px;
+  }
+
+  #search {
+    width: 100%;
+    background: var(--panel-raised);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 10px 14px;
+    color: var(--text);
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+  #search:focus { outline: none; border-color: var(--cyan); }
+  #search::placeholder { color: var(--muted); }
+
+  .stat-chip {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 6px 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .stat-chip strong { color: var(--cyan); font-weight: 500; }
+
+  /* ---------- Layout ---------- */
+  .layout {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 24px 28px 60px;
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 28px;
+  }
+
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+
+  /* ---------- Sidebar ---------- */
+  aside.sidebar {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .panel-block {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 16px;
+  }
+
+  .panel-block h2 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .panel-block h2::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--cyan);
+  }
+
+  .filter-group { margin-bottom: 16px; }
+  .filter-group:last-child { margin-bottom: 0; }
+
+  .filter-group label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .chip:hover { border-color: var(--cyan); color: var(--text); }
+
+  .chip.active {
+    background: var(--cyan);
+    border-color: var(--cyan);
+    color: #04181C;
+    font-weight: 500;
+  }
+
+  .distro-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+  .distro-label { width: 78px; color: var(--muted); flex-shrink: 0; }
+  .distro-bar-track { flex: 1; height: 6px; background: var(--panel-raised); border-radius: 3px; overflow: hidden; }
+  .distro-bar-fill { height: 100%; border-radius: 3px; }
+  .distro-count { width: 24px; text-align: right; color: var(--text); }
+
+  .reset-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .reset-btn:hover { border-color: var(--magenta); color: var(--magenta); }
+
+  /* ---------- Grid ---------- */
+  .grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--cyan); }
+
+  .card .preview {
+    aspect-ratio: 16/9;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  .card .preview img { width: 100%; height: 100%; display: block; }
+
+  .card .body { padding: 12px 14px 14px; }
+
+  .card .name {
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    line-height: 1.25;
+  }
+
+  .card .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    padding: 2px 7px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .badge.category { border-color: var(--cyan); color: var(--cyan); }
+
+  .retention-dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+  .retention-High { background: var(--green); }
+  .retention-Medium { background: var(--amber); }
+  .retention-Low { background: var(--magenta); }
+
+  .swatch-row { display: flex; gap: 4px; }
+  .swatch { width: 12px; height: 12px; border-radius: 2px; border: 1px solid rgba(255,255,255,0.15); }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 13px;
+  }
+
+  /* ---------- Modal ---------- */
+  .modal-overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 86vh;
+    overflow-y: auto;
+  }
+
+  .modal .preview-large { aspect-ratio: 16/9; background: #000; }
+  .modal .preview-large img { width: 100%; height: 100%; display: block; }
+
+  .modal-body { padding: 22px 24px 26px; }
+
+  .modal-body h3 {
+    font-family: var(--font-display);
+    font-size: 20px;
+    margin: 0 0 4px;
+  }
+
+  .modal-close {
+    float: right;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    width: 28px; height: 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+  }
+  .modal-close:hover { border-color: var(--magenta); color: var(--magenta); }
+
+  .field-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .field-row:last-child { border-bottom: none; }
+  .field-row .k {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .field-row .v { text-align: right; }
+
+  .desc-block {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  .desc-block .label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .nav-links {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 28px 40px;
+    display: flex;
+    gap: 16px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+  }
+  .nav-links a { color: var(--cyan); text-decoration: none; }
+  .nav-links a:hover { text-decoration: underline; }
+
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="rec-dot"></span>
+      <div>
+        <h1>Content Creator Assets Dataset</h1>
+        <div class="sub">LIVE FEED · <span id="total-count">0</span> ASSETS INDEXED</div>
+      </div>
+    </div>
+    <div class="search-wrap">
+      <input id="search" type="text" placeholder="Search by name, use case, or tag...">
+    </div>
+    <div class="stat-chip">Showing <strong id="shown-count">0</strong> / <span id="grand-total">0</span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="panel-block">
+      <h2>Category</h2>
+      <div class="chip-row" id="category-filters"></div>
+    </div>
+
+    <div class="panel-block">
+      <h2>Platform</h2>
+      <div class="chip-row" id="platform-filters"></div>
+    </div>
+
+    <div class="panel-block">
+      <h2>Retention Tier</h2>
+      <div class="chip-row" id="retention-filters"></div>
+    </div>
+
+    <div class="panel-block">
+      <h2>Category Distribution</h2>
+      <div id="distro-chart"></div>
+    </div>
+
+    <button class="reset-btn" id="reset-filters">Reset all filters</button>
+  </aside>
+
+  <main>
+    <div class="grid-header">
+      <span id="grid-status">All categories</span>
+      <span>Click a card for full metadata</span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </main>
+</div>
+
+<div class="nav-links">
+  <a href="setup.html">→ Database & API setup guide</a>
+  <a href="README.md">→ README</a>
+  <a href="https://github.com/Jvn1604/content-creator-assets-dataset">→ GitHub repo</a>
+</div>
+
+<div class="modal-overlay" id="modal-overlay">
+  <div class="modal">
+    <div class="preview-large" id="modal-preview"></div>
+    <div class="modal-body">
+      <button class="modal-close" id="modal-close">×</button>
+      <h3 id="modal-name"></h3>
+      <div id="modal-fields"></div>
+      <div class="desc-block">
+        <div class="label">Description</div>
+        <div id="modal-desc"></div>
+      </div>
+      <div class="desc-block">
+        <div class="label">Retention Tier Rationale <span style="opacity:.6">(illustrative, see README)</span></div>
+        <div id="modal-retention"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const CATEGORY_COLORS = {
+  'overlay': '#00E5FF', 'transition': '#FFB800', 'lower-third': '#3DDC84',
+  'alert': '#FF2E88', 'panel': '#7B2FF7', 'intro-outro': '#F5D300', 'font': '#38BDF8'
+};
+
+let ASSETS = [];
+let state = { search: '', category: null, platform: null, retention: null };
+
+async function loadData() {
+  const res = await fetch('data/assets.json');
+  ASSETS = await res.json();
+  document.getElementById('total-count').textContent = ASSETS.length;
+  document.getElementById('grand-total').textContent = ASSETS.length;
+  buildFilters();
+  buildDistroChart();
+  render();
+}
+
+function buildFilters() {
+  const categories = [...new Set(ASSETS.map(a => a.category))].sort();
+  const platforms = [...new Set(ASSETS.flatMap(a => a.platforms))].sort();
+  const tiers = ['High', 'Medium', 'Low'];
+
+  const catWrap = document.getElementById('category-filters');
+  categories.forEach(c => {
+    const chip = document.createElement('button');
+    chip.className = 'chip';
+    chip.textContent = c;
+    chip.onclick = () => { state.category = state.category === c ? null : c; render(); updateActiveChips(); };
+    chip.dataset.value = c;
+    catWrap.appendChild(chip);
+  });
+
+  const platWrap = document.getElementById('platform-filters');
+  platforms.forEach(p => {
+    const chip = document.createElement('button');
+    chip.className = 'chip';
+    chip.textContent = p;
+    chip.onclick = () => { state.platform = state.platform === p ? null : p; render(); updateActiveChips(); };
+    chip.dataset.value = p;
+    platWrap.appendChild(chip);
+  });
+
+  const retWrap = document.getElementById('retention-filters');
+  tiers.forEach(t => {
+    const chip = document.createElement('button');
+    chip.className = 'chip';
+    chip.textContent = t;
+    chip.onclick = () => { state.retention = state.retention === t ? null : t; render(); updateActiveChips(); };
+    chip.dataset.value = t;
+    retWrap.appendChild(chip);
+  });
+}
+
+function updateActiveChips() {
+  document.querySelectorAll('#category-filters .chip').forEach(c => c.classList.toggle('active', c.dataset.value === state.category));
+  document.querySelectorAll('#platform-filters .chip').forEach(c => c.classList.toggle('active', c.dataset.value === state.platform));
+  document.querySelectorAll('#retention-filters .chip').forEach(c => c.classList.toggle('active', c.dataset.value === state.retention));
+}
+
+function buildDistroChart() {
+  const counts = {};
+  ASSETS.forEach(a => { counts[a.category] = (counts[a.category] || 0) + 1; });
+  const max = Math.max(...Object.values(counts));
+  const wrap = document.getElementById('distro-chart');
+  Object.entries(counts).sort((a,b) => b[1]-a[1]).forEach(([cat, count]) => {
+    const row = document.createElement('div');
+    row.className = 'distro-row';
+    row.innerHTML = `
+      <span class="distro-label">${cat}</span>
+      <span class="distro-bar-track"><span class="distro-bar-fill" style="width:${(count/max*100)}%; background:${CATEGORY_COLORS[cat] || '#888'}"></span></span>
+      <span class="distro-count">${count}</span>
+    `;
+    wrap.appendChild(row);
+  });
+}
+
+function matches(asset) {
+  if (state.category && asset.category !== state.category) return false;
+  if (state.platform && !asset.platforms.includes(state.platform)) return false;
+  if (state.retention && asset.retention_tier !== state.retention) return false;
+  if (state.search) {
+    const q = state.search.toLowerCase();
+    const haystack = [asset.name, asset.use_case, asset.description, ...asset.style_tags].join(' ').toLowerCase();
+    if (!haystack.includes(q)) return false;
+  }
+  return true;
+}
+
+function render() {
+  const filtered = ASSETS.filter(matches);
+  document.getElementById('shown-count').textContent = filtered.length;
+  document.getElementById('grid-status').textContent = state.category ? `Category: ${state.category}` : 'All categories';
+
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '';
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '<div class="empty-state">No assets match these filters. Try resetting.</div>';
+    return;
+  }
+
+  filtered.forEach(asset => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.onclick = () => openModal(asset);
+    card.innerHTML = `
+      <div class="preview"><img src="${asset.preview_image}" loading="lazy" alt="${asset.name} preview"></div>
+      <div class="body">
+        <p class="name">${asset.name}</p>
+        <div class="meta-row">
+          <span class="badge category">${asset.category}</span>
+          <span><span class="retention-dot retention-${asset.retention_tier}"></span>${asset.retention_tier}</span>
+        </div>
+        <div class="meta-row">
+          <div class="swatch-row">
+            ${asset.color_palette.slice(0,4).map(c => `<span class="swatch" style="background:${c}"></span>`).join('')}
+          </div>
+          <span>${asset.platforms.join(' · ')}</span>
+        </div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function openModal(asset) {
+  document.getElementById('modal-preview').innerHTML = `<img src="${asset.preview_image}" alt="${asset.name}">`;
+  document.getElementById('modal-name').textContent = asset.name;
+  document.getElementById('modal-desc').textContent = asset.description;
+  document.getElementById('modal-retention').textContent = asset.retention_rationale;
+
+  const fields = [
+    ['Category', asset.category],
+    ['Style Tags', asset.style_tags.join(', ')],
+    ['Platforms', asset.platforms.join(', ')],
+    ['Font Family', asset.font_family || '—'],
+    ['Effect Notes', asset.effect_notes],
+    ['Animation Type', asset.animation_type],
+    ['Use Case', asset.use_case],
+    ['Palette', asset.color_palette.join('  ')],
+  ];
+  document.getElementById('modal-fields').innerHTML = fields.map(([k,v]) =>
+    `<div class="field-row"><span class="k">${k}</span><span class="v">${v}</span></div>`
+  ).join('');
+
+  document.getElementById('modal-overlay').classList.add('open');
+}
+
+document.getElementById('modal-close').onclick = () => document.getElementById('modal-overlay').classList.remove('open');
+document.getElementById('modal-overlay').onclick = (e) => { if (e.target.id === 'modal-overlay') e.currentTarget.classList.remove('open'); };
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.getElementById('modal-overlay').classList.remove('open'); });
+
+document.getElementById('search').addEventListener('input', (e) => { state.search = e.target.value; render(); });
+document.getElementById('reset-filters').onclick = () => {
+  state = { search: '', category: null, platform: null, retention: null };
+  document.getElementById('search').value = '';
+  updateActiveChips();
+  render();
+};
+
+loadData();
+</script>
+</body>
+</html>

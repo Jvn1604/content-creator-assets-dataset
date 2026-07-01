@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setup Guide — Content Creator Assets Dataset</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0B0D10; --panel: #14171C; --panel-raised: #1B1F26; --border: #262B33;
+    --text: #E8ECEF; --muted: #7A8188; --cyan: #00E5FF; --magenta: #FF2E88; --amber: #FFB800;
+    --font-display: 'Chakra Petch', sans-serif; --font-body: 'Inter', sans-serif; --font-mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-body);
+    background-image: radial-gradient(circle at 15% 0%, rgba(0,229,255,0.06), transparent 40%);
+  }
+  header.topbar {
+    position: sticky; top: 0; z-index: 20; background: rgba(11,13,16,0.92);
+    backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 16px 28px;
+  }
+  .topbar-inner { display:flex; align-items:center; justify-content:space-between; max-width: 1100px; margin: 0 auto; gap: 16px; flex-wrap: wrap; }
+  .brand { display:flex; align-items:center; gap:12px; }
+  .rec-dot { width:10px; height:10px; border-radius:50%; background: var(--amber); }
+  .brand h1 { font-family: var(--font-display); font-size: 17px; margin:0; text-transform: uppercase; letter-spacing: .5px; }
+  .brand .sub { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+  .topbar a { color: var(--cyan); text-decoration: none; font-family: var(--font-mono); font-size: 12px; }
+
+  main { max-width: 1100px; margin: 0 auto; padding: 32px 28px 80px; }
+
+  .intro { max-width: 680px; margin-bottom: 36px; }
+  .intro h2 { font-family: var(--font-display); font-size: 26px; margin: 0 0 10px; }
+  .intro p { color: var(--muted); line-height: 1.6; font-size: 14px; }
+
+  .tabs { display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap; }
+  .tab-btn {
+    font-family: var(--font-mono); font-size: 12px; padding: 8px 14px; border-radius: 4px;
+    border: 1px solid var(--border); background: var(--panel); color: var(--muted); cursor: pointer;
+  }
+  .tab-btn.active { border-color: var(--cyan); color: var(--cyan); }
+
+  .code-panel {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 6px;
+    overflow: hidden; margin-bottom: 40px;
+  }
+  .code-panel-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 10px 16px; border-bottom: 1px solid var(--border);
+    font-family: var(--font-mono); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px;
+  }
+  .copy-btn {
+    background: var(--panel-raised); border: 1px solid var(--border); color: var(--text);
+    font-family: var(--font-mono); font-size: 11px; padding: 5px 11px; border-radius: 4px; cursor: pointer;
+  }
+  .copy-btn:hover { border-color: var(--cyan); }
+  .copy-btn.copied { border-color: var(--amber); color: var(--amber); }
+  pre {
+    margin: 0; padding: 18px 20px; overflow-x: auto; font-family: var(--font-mono);
+    font-size: 12.5px; line-height: 1.65; color: #C8E6EA;
+  }
+  .sql-kw { color: var(--cyan); }
+  .sql-str { color: var(--amber); }
+
+  section.step { margin-bottom: 44px; }
+  section.step h3 {
+    font-family: var(--font-display); font-size: 18px; margin: 0 0 6px;
+    display:flex; align-items:center; gap:10px;
+  }
+  section.step h3 .num {
+    font-family: var(--font-mono); font-size: 12px; color: var(--bg); background: var(--cyan);
+    width: 22px; height: 22px; border-radius: 50%; display:flex; align-items:center; justify-content:center;
+  }
+  section.step > p { color: var(--muted); font-size: 13px; margin: 0 0 16px; max-width: 640px; }
+
+  .schema-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 13px; }
+  .schema-table th, .schema-table td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  .schema-table th { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+  .schema-table td.field { font-family: var(--font-mono); color: var(--cyan); font-size: 12px; }
+  .schema-table td.type { font-family: var(--font-mono); color: var(--amber); font-size: 12px; }
+
+  footer { text-align: center; padding: 30px; color: var(--muted); font-family: var(--font-mono); font-size: 11px; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="rec-dot"></span>
+      <div><h1>Setup Guide</h1><div class="sub">SCHEMA · API · INTEGRATION</div></div>
+    </div>
+    <a href="index.html">← Back to dataset browser</a>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <h2>Wire this dataset into your own stack</h2>
+    <p>The dataset lives as flat JSON at <code>data/assets.json</code> — no server required to browse it. If you want to load it into a database or hit it from an app, use the generated schema and client snippets below. Copy, paste, adjust to taste.</p>
+  </div>
+
+  <section class="step">
+    <h3><span class="num">1</span>Field reference</h3>
+    <p>Every record in <code>data/assets.json</code> follows this shape.</p>
+    <table class="schema-table">
+      <thead><tr><th>Field</th><th>Type</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="field">id</td><td class="type">integer</td><td>Unique record id, 1–50</td></tr>
+        <tr><td class="field">name</td><td class="type">string</td><td>Asset name</td></tr>
+        <tr><td class="field">category</td><td class="type">enum</td><td>overlay · transition · lower-third · alert · panel · intro-outro · font</td></tr>
+        <tr><td class="field">style_tags</td><td class="type">string[]</td><td>Aesthetic tags, e.g. cyberpunk, retro-vhs</td></tr>
+        <tr><td class="field">platforms</td><td class="type">string[]</td><td>Twitch, YouTube, TikTok, Kick</td></tr>
+        <tr><td class="field">color_palette</td><td class="type">string[]</td><td>4 hex codes, background → accents</td></tr>
+        <tr><td class="field">font_family</td><td class="type">string | null</td><td>Set for font/lower-third/alert entries</td></tr>
+        <tr><td class="field">effect_notes</td><td class="type">string</td><td>Shadow/glow/stroke treatment</td></tr>
+        <tr><td class="field">animation_type</td><td class="type">enum</td><td>fade · slide · glitch · particle-burst · wipe · zoom-punch · static</td></tr>
+        <tr><td class="field">use_case</td><td class="type">string</td><td>Recommended stream context</td></tr>
+        <tr><td class="field">description</td><td class="type">string</td><td>Free-text description</td></tr>
+        <tr><td class="field">retention_tier</td><td class="type">enum</td><td>High · Medium · Low — <strong>illustrative annotation, not measured analytics</strong></td></tr>
+        <tr><td class="field">retention_rationale</td><td class="type">string</td><td>Reasoning behind the tier annotation</td></tr>
+        <tr><td class="field">preview_image</td><td class="type">string</td><td>Relative path to generated SVG preview</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="step">
+    <h3><span class="num">2</span>Database schema</h3>
+    <p>Pick your database. Each snippet creates a table matching the JSON shape (arrays stored as JSON columns for portability).</p>
+
+    <div class="tabs" id="db-tabs">
+      <button class="tab-btn active" data-db="postgres">PostgreSQL</button>
+      <button class="tab-btn" data-db="mysql">MySQL</button>
+      <button class="tab-btn" data-db="sqlite">SQLite</button>
+      <button class="tab-btn" data-db="mongodb">MongoDB</button>
+    </div>
+
+    <div class="code-panel">
+      <div class="code-panel-header">
+        <span id="db-panel-label">schema.sql</span>
+        <button class="copy-btn" data-copy-target="db-code">Copy</button>
+      </div>
+      <pre id="db-code"></pre>
+    </div>
+  </section>
+
+  <section class="step">
+    <h3><span class="num">3</span>Fetch it from your app</h3>
+    <p>Since the dataset is static JSON, any HTTP client works — no API key or backend needed if you're just reading it from the repo or your own hosted copy.</p>
+
+    <div class="tabs" id="lang-tabs">
+      <button class="tab-btn active" data-lang="javascript">JavaScript</button>
+      <button class="tab-btn" data-lang="python">Python</button>
+      <button class="tab-btn" data-lang="csharp">C# (Unity)</button>
+      <button class="tab-btn" data-lang="curl">cURL</button>
+    </div>
+
+    <div class="code-panel">
+      <div class="code-panel-header">
+        <span id="lang-panel-label">fetch.js</span>
+        <button class="copy-btn" data-copy-target="lang-code">Copy</button>
+      </div>
+      <pre id="lang-code"></pre>
+    </div>
+  </section>
+
+  <section class="step">
+    <h3><span class="num">4</span>Regenerate or extend the dataset</h3>
+    <p>The dataset and its SVG previews are procedurally generated from two scripts, so you can add new entries without hand-drawing anything.</p>
+    <div class="code-panel">
+      <div class="code-panel-header">
+        <span>terminal</span>
+        <button class="copy-btn" data-copy-target="regen-code">Copy</button>
+      </div>
+      <pre id="regen-code"># Edit ASSET_SEEDS in generate_data.py, then:
+python3 generate_data.py       # rebuilds data/assets.json
+python3 generate_previews.py   # rebuilds assets/previews/*.svg</pre>
+    </div>
+  </section>
+</main>
+
+<footer>content-creator-assets-dataset · originally generated metadata &amp; artwork · no third-party assets included</footer>
+
+<script>
+const DB_SNIPPETS = {
+  postgres: `CREATE TABLE assets (
+  id                 SERIAL PRIMARY KEY,
+  name               TEXT NOT NULL,
+  category           TEXT NOT NULL,
+  style_tags         JSONB NOT NULL,
+  platforms          JSONB NOT NULL,
+  color_palette      JSONB NOT NULL,
+  font_family        TEXT,
+  effect_notes       TEXT,
+  animation_type     TEXT,
+  use_case           TEXT,
+  description        TEXT,
+  retention_tier     TEXT,
+  retention_rationale TEXT,
+  preview_image      TEXT
+);
+
+CREATE INDEX idx_assets_category ON assets(category);
+CREATE INDEX idx_assets_retention ON assets(retention_tier);`,
+
+  mysql: `CREATE TABLE assets (
+  id                 INT AUTO_INCREMENT PRIMARY KEY,
+  name               VARCHAR(255) NOT NULL,
+  category           VARCHAR(50) NOT NULL,
+  style_tags         JSON NOT NULL,
+  platforms          JSON NOT NULL,
+  color_palette      JSON NOT NULL,
+  font_family        VARCHAR(100),
+  effect_notes       TEXT,
+  animation_type     VARCHAR(50),
+  use_case           TEXT,
+  description        TEXT,
+  retention_tier     VARCHAR(20),
+  retention_rationale TEXT,
+  preview_image      VARCHAR(255)
+);
+
+CREATE INDEX idx_assets_category ON assets(category);
+CREATE INDEX idx_assets_retention ON assets(retention_tier);`,
+
+  sqlite: `CREATE TABLE assets (
+  id                 INTEGER PRIMARY KEY AUTOINCREMENT,
+  name               TEXT NOT NULL,
+  category           TEXT NOT NULL,
+  style_tags         TEXT NOT NULL,      -- JSON-encoded array
+  platforms          TEXT NOT NULL,      -- JSON-encoded array
+  color_palette      TEXT NOT NULL,      -- JSON-encoded array
+  font_family        TEXT,
+  effect_notes       TEXT,
+  animation_type     TEXT,
+  use_case           TEXT,
+  description        TEXT,
+  retention_tier     TEXT,
+  retention_rationale TEXT,
+  preview_image      TEXT
+);
+
+CREATE INDEX idx_assets_category ON assets(category);`,
+
+  mongodb: `// Import directly — the JSON shape already matches a Mongo document.
+mongoimport --db creator_assets --collection assets \\
+  --file data/assets.json --jsonArray
+
+// Recommended indexes:
+db.assets.createIndex({ category: 1 });
+db.assets.createIndex({ retention_tier: 1 });
+db.assets.createIndex({ style_tags: 1 });`,
+};
+
+const LANG_SNIPPETS = {
+  javascript: `const res = await fetch('data/assets.json');
+const assets = await res.json();
+
+const overlays = assets.filter(a => a.category === 'overlay');
+console.log(\`\${overlays.length} overlay assets found\`);`,
+
+  python: `import json
+import urllib.request
+
+url = "https://raw.githubusercontent.com/Jvn1604/content-creator-assets-dataset/main/data/assets.json"
+with urllib.request.urlopen(url) as resp:
+    assets = json.load(resp)
+
+high_retention = [a for a in assets if a["retention_tier"] == "High"]
+print(f"{len(high_retention)} high-retention-tier assets")`,
+
+  csharp: `using UnityEngine;
+using UnityEngine.Networking;
+using System.Collections;
+
+IEnumerator LoadAssets() {
+    string url = "https://raw.githubusercontent.com/Jvn1604/content-creator-assets-dataset/main/data/assets.json";
+    using (UnityWebRequest req = UnityWebRequest.Get(url)) {
+        yield return req.SendWebRequest();
+        if (req.result == UnityWebRequest.Result.Success) {
+            string json = req.downloadHandler.text;
+            // wrap in a root object or use a JSON array parser of your choice
+        }
+    }
+}`,
+
+  curl: `curl -s https://raw.githubusercontent.com/Jvn1604/content-creator-assets-dataset/main/data/assets.json \\
+  | jq '.[] | select(.category == "alert")'`,
+};
+
+const DB_LABELS = { postgres: 'schema.postgres.sql', mysql: 'schema.mysql.sql', sqlite: 'schema.sqlite.sql', mongodb: 'import.mongodb.sh' };
+const LANG_LABELS = { javascript: 'fetch.js', python: 'fetch.py', csharp: 'FetchAssets.cs', curl: 'fetch.sh' };
+
+function setDb(db) {
+  document.getElementById('db-code').textContent = DB_SNIPPETS[db];
+  document.getElementById('db-panel-label').textContent = DB_LABELS[db];
+  document.querySelectorAll('#db-tabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.db === db));
+}
+function setLang(lang) {
+  document.getElementById('lang-code').textContent = LANG_SNIPPETS[lang];
+  document.getElementById('lang-panel-label').textContent = LANG_LABELS[lang];
+  document.querySelectorAll('#lang-tabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+}
+
+document.querySelectorAll('#db-tabs .tab-btn').forEach(b => b.onclick = () => setDb(b.dataset.db));
+document.querySelectorAll('#lang-tabs .tab-btn').forEach(b => b.onclick = () => setLang(b.dataset.lang));
+
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.onclick = () => {
+    const target = document.getElementById(btn.dataset.copyTarget);
+    navigator.clipboard.writeText(target.textContent).then(() => {
+      btn.textContent = 'Copied';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1500);
+    });
+  };
+});
+
+setDb('postgres');
+setLang('javascript');
+</script>
+</body>
+</html>
